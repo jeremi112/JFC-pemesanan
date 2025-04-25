@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo Food Share</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="assets/logo-white.png" rel="icon">
+    <link href="assets/logo-white.png" rel="apple-touch-icon">
+</head>
+<body>
+    <header>
+        <h1>Robo Food Share</h1>
+        <p>Silakan memilih makanan yang tersedia</p>
+    </header>
+    <main>
+        
+        <div style="width: 100%;justify-content: center;height: 100vh;margin-top: 10%;z-index: 2;position: absolute;" id="klik" class="hidden">
+            <div style="background-color:bisque;width: 40%;height: 40%;border-radius: 10px;">
+                <h1 style="margin:0 auto;color: red;text-align: center;">
+                    Makanan berhasil di Klaim
+                </h1>
+                <h2 style="display: flex;">
+                    Alamat Pengambilan: <i>Jalan Ir. Haji Juanda I No.4,</i>
+                </h2>
+                <h3 style="text-align: center;">
+                    No Pesanan: <span style="color: red;;">0012</span>
+                </h3>
+                <button style="background-color: red;color: white;border-radius: 10px;width: 50%;display: flex;justify-content: center;margin: 0 auto;cursor: pointer;" id="tutup">Tutup</button>
+            </div>
+        </div>
+           
+        
+        
+        <div class="card-container">
+            <!-- Example card, repeat this structure for each item -->
+            <div class="card">
+                <img src="assets/nasi-goreng.jpg" alt="Nasi Goreng">
+                <h2>Nasi Goreng</h2>
+                <p>Harga: Rp 5,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/sate-ayam.jpg" alt="Sate Ayam">
+                <h2>Sate Ayam</h2>
+                <p>Harga: Rp 8,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/gado-gado.jpg" alt="Gado-Gado">
+                <h2>Gado-Gado</h2>
+                <p>Harga: Rp 3,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/soto-ayam.jpg" alt="Soto Ayam">
+                <h2>Soto Ayam</h2>
+                <p>Harga: Rp 7,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/bakso.jpg" alt="Bakso">
+                <h2>Bakso</h2>
+                <p>Harga: Rp 4,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/nasi-uduk.jpg" alt="Nasi Uduk">
+                <h2>Nasi Uduk</h2>
+                <p>Harga: Rp 9,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/nasi-padang.png" alt="Nasi Padang">
+                <h2>Nasi Padang</h2>
+                <p>Harga: Rp 2,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/rendang.jpg" alt="Rendang">
+                <h2>Rendang</h2>
+                <p>Harga: Rp 6,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/mie-ayam.jpg" alt="Mie Ayam">
+                <h2>Mie Ayam</h2>
+                <p>Harga: Rp 10,000</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+            <div class="card">
+                <img src="assets/ayam-goreng.webp" alt="Ayam Goreng">
+                <h2>Ayam Goreng</h2>
+                <p>Harga: Rp 5,500</p>
+                <button class="claim-button">Klaim Makanan</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const klik= document.getElementById('klik')
+        const tutup = document.getElementById('tutup')
+
+        tutup.addEventListener('click',()=>{
+            klik.classList.add('hidden')
+            klik.classList.remove('flex')
+        })
+
+        const claimButtons = document.querySelectorAll('.claim-button');
+
+        claimButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            klik.classList.add('flex')
+            klik.classList.remove('hidden')
+        });
+    });
+    </script>
+</body>
+</html>
